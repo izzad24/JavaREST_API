@@ -13,9 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @GetMapping(value = "/user")
-    public User user() {
-        return createUser();
+    @GetMapping(value = "/users/{id}")
+    public User user(@PathVariable("id") int id) {
+        User x = new User();
+        x.setId(id);
+        return x;
     }
 
     @GetMapping(value = "/users/{name}/{active}")
@@ -23,13 +25,6 @@ public class UserController {
         User x = new User();
         x.setName(name);
         x.setActive(active);
-        return x;
-    }
-
-    @GetMapping(value = "/users/{id}")
-    public User userVarName(@PathVariable("id") int id) {
-        User x = new User();
-        x.setId(id);
         return x;
     }
 
