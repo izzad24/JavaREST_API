@@ -9,6 +9,7 @@ public class Properties {
     private String address;
     private String createAt;
     private String updateAt;
+    private String location;
 
 
     public int getId() {
@@ -42,5 +43,15 @@ public class Properties {
     public void setUpdateAt(String updateAt) {
         this.updateAt = updateAt;
     }
+
+
+    public String getLocation() {
+        return this.location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
 
 }

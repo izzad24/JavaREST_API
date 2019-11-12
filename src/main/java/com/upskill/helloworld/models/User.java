@@ -5,17 +5,17 @@ package com.upskill.helloworld.models;
  */
 public class User {
 
-    private int id;
+    private Integer id;
     private String name;
     private String[] roles;
-    private boolean active;
+    private Boolean active;
 
 
-    public int getId() {
+    public Integer getId() {
         return this.id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -35,15 +35,15 @@ public class User {
         this.roles = roles;
     }
 
-    public boolean isActive() {
+    public Boolean isActive() {
         return this.active;
     }
 
-    public boolean getActive() {
+    public Boolean getActive() {
         return this.active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Boolean active) {
         this.active = active;
     }
 

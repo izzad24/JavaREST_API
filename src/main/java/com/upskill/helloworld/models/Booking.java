@@ -13,6 +13,20 @@ public class Booking {
     private String checkOut;
     private String createAt;
     private String updateAt;
+    private boolean confirmed;
+
+
+    public boolean isConfirmed() {
+        return this.confirmed;
+    }
+
+    public boolean getConfirmed() {
+        return this.confirmed;
+    }
+
+    public void setConfirmed(boolean confirmed) {
+        this.confirmed = confirmed;
+    }
 
     public int getId() {
         return this.id;
