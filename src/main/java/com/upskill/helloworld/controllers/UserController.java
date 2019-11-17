@@ -41,7 +41,7 @@ public class UserController {
         ArrayList<User> users = seedUsers();
         ArrayList<User> result = new ArrayList<>();
         for (User user : users) {
-            System.out.println(user.getName());
+            // System.out.println(user.getName());
             if(name != null && active != null){
                 if(user.getName().equalsIgnoreCase(name) && user.getActive() == active){
                     result.add(user);
@@ -55,8 +55,12 @@ public class UserController {
                     result.add(user);
                 }
             }
-            }
+        }
+        if(!result.isEmpty()){
             return result;
+        }else{
+            return users;
+        }
     }
 
     @GetMapping(value = "/user2")
